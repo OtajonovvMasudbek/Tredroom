@@ -1,22 +1,53 @@
 <template>
-    <div class="">
-        <button :class="['lg:flex lg:items-center px-8 pl-5 py-2 lg:text-slate-900 font-bold md:block md:text-left md:rounded-xl lg:rounded-xl rounded-xl lg:transition-transform lg:transform hover:scale-95', gradientClass]">
-            <slot name="icon-left" class="mr-2"></slot>
-            {{ buttonText }}
-            <slot name="icon-right" class="ml-2"></slot>
-        </button>
-    </div>
-</template>
-
-<script setup>
-import { defineProps } from 'vue';
-
-const props = defineProps({
+    <button
+      class="relative px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg overflow-hidden group"
+    >
+      <span class="absolute inset-0 transition-transform transform -translate-x-full group-hover:translate-x-0 bg-emerald-400 h-full"></span>
+      <span class="relative z-10">
+        <slot name="icon-left"></slot>
+        {{ buttonText }}
+        <slot name="icon-right"></slot>
+      </span>
+    </button>
+  </template>
+  
+  <script setup>
+  const props = defineProps({
     buttonText: {
-        type: String,
-        required: true,
-    },
-});
-
-const gradientClass = 'bg-gradient-to-r from-green-400 via-green-300 to-green-500';
-</script>
+      type: String,
+      required: true
+    }
+  });
+  </script>
+  
+  <style scoped>
+  button {
+    cursor: pointer;
+  }
+  
+  button:hover {
+    outline: none;
+  }
+  
+  button:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  
+  button:hover:before {
+    width: 400%;
+    height: 400%;
+    top: -50%;
+    left: -50%;
+  }
+  </style>
+  

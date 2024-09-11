@@ -4,7 +4,7 @@
             <h2 class="text-center text-[35px] font-bold pt-10 text-slate-900">
                 Benefits of joining our course
             </h2>
-            <p class="text-center text-[15px] font-semibold py-5  text-slate-500">
+            <p class="text-center text-[18px] font-semibold px-7 py-5  text-slate-500">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec <br> ullamcorper mattis, pulvinar dapibus leo.
             </p>
         </div>

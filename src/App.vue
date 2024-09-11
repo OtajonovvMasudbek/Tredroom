@@ -1,11 +1,16 @@
 <template>
   <div>
-   <Header/> 
-   <Index/>
+    <Header/>
+    <router-view></router-view> 
+    <Asked/>
+    <Apple/>
+    <Footer/>
   </div>
 </template>
+
 <script setup>
 import Header from './leyauts/Header.vue';
-import Index from './pages/index.vue';
-
+import Asked from './leyauts/Asked.vue';
+import Apple from './leyauts/Apple.vue';
+import Footer from './leyauts/Footer.vue';
 </script>

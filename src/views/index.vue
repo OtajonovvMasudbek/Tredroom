@@ -8,6 +8,8 @@
          <Stocks/>
          <Course/>
          <Best/>
+         <What/>
+         <Articles/>
     </div>
 </template>
 
@@ -20,4 +22,6 @@ import Treding from '@/components/sektion/Treding.vue';
 import Stocks from '@/components/sektion/Stocks.vue';
 import Course from '@/components/sektion/Course.vue';
 import Best from '@/components/sektion/Best.vue';
+import What from '@/components/sektion/What.vue';
+import Articles from '@/components/sektion/Articles.vue';
 </script>
