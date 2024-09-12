@@ -1,6 +1,8 @@
 <template>
   <div
-    class="bg-[url('https://traderoom.1onestrong.com/wp-content/uploads/2024/08/Traderoom-jpg-06.jpg')] mx-5 rounded-xl mb-10 bg-cover bg-center"
+    ref="challengeSection"
+    :class="{'slide-up': isVisible}"
+    class="bg-[#051517] mx-5 rounded-xl mb-10 bg-cover bg-center opacity-0 transform translate-y-10 transition-all duration-1000"
   >
     <h1
       class="text-2xl md:text-5xl lg:text-6xl lg:text-left text-center text-white font-bold px-5 md:px-10 py-5 md:py-10"
@@ -38,7 +40,7 @@
         Join 584700+ traders inside
       </p>
     </div>
-    <Button class=" pb-10 pl-10 pt-5 lg:mt-5" buttonText="Explore Membership">
+    <Button class="pb-10 pl-10 pt-5 ml-4 mb-4 lg:mt-5" buttonText="Explore Membership">
       <template #icon-right>
         <i class="pt-1 pl-2 ri-arrow-right-line"></i>
       </template>
@@ -47,6 +49,35 @@
 </template>
 
 <script setup>
-  import Button from '@/components/Common/Button.vue';
+import { ref, onMounted } from 'vue';
+import Button from '@/components/Common/Button.vue';
+
+const isVisible = ref(false);
+const challengeSection = ref(null);
+
+onMounted(() => {
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      isVisible.value = true;
+    }
+  }, { threshold: 0.1 });
+
+  if (challengeSection.value) {
+    observer.observe(challengeSection.value);
+  }
+});
 </script>
-   
+
+<style scoped>
+/* Initial hidden state */
+.opacity-0 {
+  opacity: 0;
+  transform: translateY(10px); /* Start below the viewport */
+}
+
+/* Slide-up effect when visible */
+.slide-up {
+  opacity: 1;
+  transform: translateY(0); /* Slide up to normal position */
+}
+</style>

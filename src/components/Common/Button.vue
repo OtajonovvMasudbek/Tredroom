@@ -1,6 +1,6 @@
 <template>
     <button
-      class="relative px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg overflow-hidden group"
+      class="relative px-6 py-3 bg-emerald-600 h-[50px]  text-white font-semibold rounded-lg overflow-hidden group"
     >
       <span class="absolute inset-0 transition-transform transform -translate-x-full group-hover:translate-x-0 bg-emerald-400 h-full"></span>
       <span class="relative z-10">

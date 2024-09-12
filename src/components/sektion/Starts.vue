@@ -1,5 +1,9 @@
 <template>
-  <div class="bg-[#10505C] pt-[170px] px-5">
+  <div
+    ref="heroSection"
+    :class="{'slide-up': isVisible}"
+    class="bg-[#10505C] pt-[170px] px-5 opacity-0 transform translate-y-10 transition-all duration-1000"
+  >
     <div class="mx-auto flex flex-col lg:flex-row items-center max-w-[1200px]">
       <div class="flex flex-col lg:flex-row items-center w-full">
         <div class="max-w-[700px] text-center lg:text-left">
@@ -37,5 +41,35 @@
 </template>
 
 <script setup>
-import Button from "../Common/Button.vue";
+import { ref, onMounted } from 'vue';
+import Button from '../Common/Button.vue';
+
+const isVisible = ref(false);
+const heroSection = ref(null);
+
+onMounted(() => {
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      isVisible.value = true;
+    }
+  }, { threshold: 0.1 });
+
+  if (heroSection.value) {
+    observer.observe(heroSection.value);
+  }
+});
 </script>
+
+<style scoped>
+/* Initial hidden state */
+.opacity-0 {
+  opacity: 0;
+  transform: translateY(10px); /* Start below the viewport */
+}
+
+/* Slide-up effect when visible */
+.slide-up {
+  opacity: 1;
+  transform: translateY(0); /* Slide up to normal position */
+}
+</style>
