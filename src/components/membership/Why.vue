@@ -8,7 +8,7 @@
         </p>
     </div>
 
-    <div class=" grid lg:grid-cols-4 grid-cols-2 mx-auto  lg:px-10 gap-5 bg-green-50 justify-center">
+    <div class=" grid lg:grid-cols-4 grid-cols-2 mx-auto pb-20 lg:px-10 gap-5 bg-green-50 justify-center">
         <Card
         imageSrc="https://traderoom.1onestrong.com/wp-content/uploads/2024/08/Icon-023.png"
         title="Daily Pre-Market Prep"

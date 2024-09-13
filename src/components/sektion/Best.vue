@@ -1,5 +1,5 @@
 <template>
-  <div ref="section" :class="{'slide-up': isVisible}" class="opacity-0 transform translate-y-[50px] transition-all duration-1000 bg-emerald-50 py-10 px-5">
+  <div ref="section" :class="{'fade-in': isVisible}" class=" transition-opacity duration-1000 bg-emerald-50 py-10 px-5">
     <div class="bg-[#10505C] pt-20 lg:px-20 lg:pb-10 rounded-3xl px-3">
       <div class="text-center mx-auto">
         <p class="text-[#8bf7d3] bg-[#206f7e] rounded-xl py-1 px-3 flex mx-auto max-w-[150px]">
@@ -66,11 +66,9 @@ onMounted(() => {
 <style scoped>
 .opacity-0 {
   opacity: 0;
-  transform: translateY(50px); 
 }
 
-.slide-up {
-  opacity: 1;
-  transform: translateY(0); 
+.fade-in {
+  opacity: 20;
 }
 </style>
