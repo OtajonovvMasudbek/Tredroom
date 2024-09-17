@@ -13,7 +13,7 @@
       />
     </div>
 
-    <div class="text-left pt-10 lg:pt-[130px]">
+    <div class="lg:text-left text-center pt-10 lg:pt-[130px]">
       <h2 class="text-slate-900 font-bold text-[30px] lg:text-[45px]">
         A Trading Community <br />
         Dedicated To Your <br />

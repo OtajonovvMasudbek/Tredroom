@@ -3,6 +3,7 @@
     <div>
          <Starts/>
          <Vision/>
+         <Learin/>
          <Treding/>
          <Stocks/>
          <Course/>
@@ -22,4 +23,5 @@ import Course from '@/components/sektion/Course.vue';
 import Best from '@/components/sektion/Best.vue';
 import What from '@/components/sektion/What.vue';
 import Articles from '@/components/sektion/Articles.vue';
+import Learin from '@/components/sektion/Learin.vue';
 </script>

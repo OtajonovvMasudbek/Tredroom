@@ -2,33 +2,33 @@
   <div class="card-container">
     <p class="text-center text-green-600 font-semibold py-5">{{ text }}</p>
 
-    <div>
+    <div class="text-center lg:text-left">
       <img
-        class="w-[150px] mx-auto sm:w-[300px] md:max-w-[400px] lg:w-[500px] lg:py-5"
+        class="w-[150px] mx-auto sm:w-[300px] md:max-w-[400px] lg:w-[500px] lg:py-5 lg:mx-0"
         :src="imgSrc"
         :alt="alt"
       />
     </div>
 
-    <div>
+    <div class="text-center lg:text-left">
       <h2
-        class="text-center px-5 lg:px-[0] text-xl mx-auto font-bold text-white max-w-[300px] md:text-2xl lg:max-w-[400px]"
+        class="px-5 lg:px-0 text-xl mx-auto font-bold text-white max-w-[300px] md:text-2xl lg:max-w-[400px]"
       >
         {{ title }}
       </h2>
       <p class="text-center text-slate-500 pt-5">{{ item }}</p>
     </div>
 
-    <div>
-      <button class="flex mx-auto items-center text-green-600 py-5 md:py-6">
+    <div class="text-center lg:text-left">
+      <button class="flex mx-auto lg:mx-0 items-center text-green-600 py-5 md:py-6">
         {{ buttonText }}
         <i class="pt-1 ri-arrow-right-line"></i>
       </button>
     </div>
   </div>
 </template>
-  
-  <script>
+
+<script>
 import { defineComponent, toRefs } from "vue";
 
 export default defineComponent({
@@ -54,8 +54,8 @@ export default defineComponent({
   },
 });
 </script>
-  
-  <style scoped>
+
+<style scoped>
 .card-container {
   background-color: #0d3e46;
   border-radius: 0.75rem;
@@ -144,4 +144,3 @@ export default defineComponent({
   }
 }
 </style>
-  

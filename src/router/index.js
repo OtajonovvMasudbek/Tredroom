@@ -4,6 +4,7 @@ import Membership from '@/views/membership.vue'
 import Products from '@/views/products.vue'
 import Contact from '@/views/contact.vue'
 import Services from '@/views/services.vue'
+import Page from '@/views/page.vue'
 
 const routes = [
   {
@@ -22,6 +23,11 @@ const routes = [
     component: Products
   }, 
   {
+    path: '/page',
+    name: 'Page',
+    component: Page
+  },
+  {
     path: '/contact',
     name: 'Contact',
     component: Contact
@@ -30,7 +36,7 @@ const routes = [
     path: '/services',
     name: 'Services',
     component: Services
-  }
+  },
 ]
 
 const router = createRouter({

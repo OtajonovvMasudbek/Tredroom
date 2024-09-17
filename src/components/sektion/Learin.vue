@@ -55,12 +55,10 @@
 import { ref, onMounted } from 'vue';
 import Card from '../Common/Card.vue';
 
-// Example function for button click
 const handleButtonClick = () => {
   alert('Button clicked!');
 };
 
-// Track visibility of section for animation
 const isVisible = ref(false);
 const section = ref(null);
 
@@ -78,15 +76,13 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* Initial hidden state for text and cards */
 .opacity-0 {
   opacity: 0;
-  transform: translateY(50px); /* Start below the viewport */
+  transform: translateY(50px); 
 }
 
-/* Slide-up effect when visible */
 .slide-up {
   opacity: 1;
-  transform: translateY(0); /* Slide up to normal position */
+  transform: translateY(0); 
 }
 </style>

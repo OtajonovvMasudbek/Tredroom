@@ -1,5 +1,5 @@
 <template>
-  <div class=" lg:flex gap-[250px] mt-20 mr-10">
+  <div class=" lg:flex gap-[250px] mt-20 lg:mr-10">
     <div class="relative lg:px-10 lg:pb-48 pt-10  max-w-full lg:max-w-[500px]">
       <img
         class="lg:max-w-[400px] translate-x-10 max-w-[250px] rounded-lg"

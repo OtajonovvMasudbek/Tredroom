@@ -38,7 +38,7 @@ export default {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             this.startCounter();
-            observer.unobserve(entry.target); // Stop observing once started
+            observer.unobserve(entry.target); 
           }
         });
       }, options);
@@ -54,7 +54,7 @@ export default {
           clearInterval(this.interval);
           this.interval = null;
         }
-      }, 80);
+      }, 50);
     }
   },
   beforeUnmount() {

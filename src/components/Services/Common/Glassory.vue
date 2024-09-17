@@ -1,7 +1,7 @@
 <template>
     <div class="my-5">
       <h2
-        class="lg:text-lg font-semibold px-5 bg-slate-100 mb-1 rounded-lg lg:py-5 py-2 text-[18px] cursor-pointer text-center flex items-center justify-center"
+        class="lg:text-[16px] font-semibold px-5 bg-slate-100 mb-1 rounded-lg lg:py-5 py-2 text-[13px] cursor-pointer text-center flex items-center justify-center"
         @click="toggleContent"
       >
         {{ heading }}
